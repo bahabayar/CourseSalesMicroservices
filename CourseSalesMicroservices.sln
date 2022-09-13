@@ -3,9 +3,34 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{5B616344-92C8-447F-9A9F-DC8726779B8C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{7E112F47-1FD9-4332-93F1-9AF120D02769}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Course.Services.Catalog", "Services\Catalog\Course.Services.Catalog\Course.Services.Catalog.csproj", "{05A4231D-469B-47D2-B9FB-B15E1E6FA276}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2C8D7B9D-746E-40B1-AAC0-086DDB6CA3B6}"
+	ProjectSection(SolutionItems) = preProject
+		MyApiPorts.txt = MyApiPorts.txt
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05A4231D-469B-47D2-B9FB-B15E1E6FA276}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05A4231D-469B-47D2-B9FB-B15E1E6FA276}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05A4231D-469B-47D2-B9FB-B15E1E6FA276}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05A4231D-469B-47D2-B9FB-B15E1E6FA276}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7E112F47-1FD9-4332-93F1-9AF120D02769} = {5B616344-92C8-447F-9A9F-DC8726779B8C}
+		{05A4231D-469B-47D2-B9FB-B15E1E6FA276} = {7E112F47-1FD9-4332-93F1-9AF120D02769}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {027AA7E1-DEAB-49A7-AACC-2FCA6104779F}
