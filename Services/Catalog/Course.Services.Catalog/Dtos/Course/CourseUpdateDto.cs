@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Course.Services.Catalog.Dtos.Course
+namespace Course.Services.Catalog.Dtos
 {
     public class CourseUpdateDto
     {
