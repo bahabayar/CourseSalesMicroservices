@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Course.Services.Catalog.Models
+namespace CourseSales.Services.Catalog.Models
 {
     public class Course
     {

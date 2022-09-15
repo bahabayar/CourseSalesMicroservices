@@ -1,16 +1,16 @@
 ﻿using AutoMapper;
-using Course.Services.Catalog.Dtos;
-using Course.Services.Catalog.Models;
-using Course.Services.Catalog.Services.Interfaces;
-using Course.Services.Catalog.Settings;
-using Course.Shared.Dtos;
+using CourseSales.Services.Catalog.Dtos;
+using CourseSales.Services.Catalog.Models;
+using CourseSales.Services.Catalog.Services.Interfaces;
+using CourseSales.Services.Catalog.Settings;
+using CourseSales.Shared.Dtos;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Course.Services.Catalog.Services
+namespace CourseSales.Services.Catalog.Services
 {
     internal class CategoryService : ICategoryService
     {

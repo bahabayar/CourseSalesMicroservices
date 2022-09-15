@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.Json.Serialization;
 
-namespace Course.Shared.Dtos
+namespace CourseSales.Shared.Dtos
 {
     public class Response<T>
     {
