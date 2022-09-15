@@ -1,6 +1,6 @@
-using Course.Services.Catalog.Services;
-using Course.Services.Catalog.Services.Interfaces;
-using Course.Services.Catalog.Settings;
+using CourseSales.Services.Catalog.Services;
+using CourseSales.Services.Catalog.Services.Interfaces;
+using CourseSales.Services.Catalog.Settings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -15,7 +15,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Course.Services.Catalog
+namespace CourseSales.Services.Catalog
 {
     public class Startup
     {
@@ -30,6 +30,7 @@ namespace Course.Services.Catalog
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<ICourseService, CourseService>();
 
             services.AddAutoMapper(typeof(Startup));
             services.AddControllers();

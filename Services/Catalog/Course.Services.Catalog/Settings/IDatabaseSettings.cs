@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Course.Services.Catalog.Settings
+namespace CourseSales.Services.Catalog.Settings
 {
-internal interface IDatabaseSettings
+    internal interface IDatabaseSettings
     {
         public string CourseCollectionName { get; set; }
         public string CategoryCollectionName { get; set; }
