@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace CourseSales.Services.Catalog.Services.Interfaces
 {
-    internal interface ICourseService
+    public interface ICourseService
     {
         Task<Response<List<CourseDto>>> GetAllAsync();
         Task<Response<CourseDto>> CreateAsync(CourseCreateDto model);

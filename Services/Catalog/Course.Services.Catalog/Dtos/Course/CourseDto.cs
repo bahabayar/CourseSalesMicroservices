@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace CourseSales.Services.Catalog.Dtos
 {
-    internal class CourseDto
+    public class CourseDto
     {
         public string Id { get; set; }
         public string CategoryId { get; set; }

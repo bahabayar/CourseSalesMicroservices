@@ -10,20 +10,20 @@ namespace CourseSales.Services.Catalog.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    internal class CategoryController : CustomBaseController
+    public class CategoryController : CustomBaseController
     {
         private readonly ICategoryService _categoryService;
         private readonly IMapper _mapper;
 
-        internal CategoryController(ICategoryService categoryService,IMapper mapper)
+        public CategoryController(ICategoryService categoryService,IMapper mapper)
         {
             _categoryService = categoryService;
             _mapper = mapper;
         }
         [HttpGet("{id}")]
-        public  async Task<IActionResult> GetByIdAsync(string Id)
+        public  async Task<IActionResult> GetByIdAsync(string id)
         { 
-            var category = await _categoryService.GetByIdAsync(Id);
+            var category = await _categoryService.GetByIdAsync(id);
             return CreateActionResultInstance(category);
         }
         [HttpGet]
