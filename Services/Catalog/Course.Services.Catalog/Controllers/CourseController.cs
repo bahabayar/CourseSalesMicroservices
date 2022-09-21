@@ -9,13 +9,14 @@ namespace CourseSales.Services.Catalog.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    internal class CourseController : CustomBaseController
+    public class CourseController : CustomBaseController
     {
         private readonly ICourseService _courseService;
-        internal CourseController(ICourseService courseService)
+        public CourseController(ICourseService courseService)
         {
             _courseService = courseService;
         }
+        [HttpGet]
         public async Task<IActionResult> GetAllAsync()
         {
             var response = await _courseService.GetAllAsync();

@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace CourseSales.Services.Catalog.Services
 {
-    internal class CategoryService : ICategoryService
+    public class CategoryService : ICategoryService
     {
         private readonly IMongoCollection<Category> _categoryCollection;
         private readonly IMapper _mapper;
@@ -39,7 +39,7 @@ namespace CourseSales.Services.Catalog.Services
         }
         public async Task<Response<CategoryDto>> GetByIdAsync (string id)
         {
-          var category =   await _categoryCollection.Find<Category>(x => x.Id == id).FirstOrDefaultAsync();
+          var category =   await _categoryCollection.Find(x => x.Id == id).FirstOrDefaultAsync();
             if (category == null)
             {
                 return Response<CategoryDto>.Fail("Category not found", 404);
