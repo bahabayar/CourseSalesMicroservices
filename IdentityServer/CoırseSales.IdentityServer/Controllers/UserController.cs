@@ -1,14 +1,17 @@
-﻿using CoırseSales.IdentityServer.Dtos;
-using CoırseSales.IdentityServer.Models;
+﻿using CourseSales.IdentityServer.Dtos;
+using CourseSales.IdentityServer.Models;
 using CourseSales.Shared.Dtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Threading.Tasks;
+using static IdentityServer4.IdentityServerConstants;
 
-namespace CoırseSales.IdentityServer.Controllers
+namespace CourseSales.IdentityServer.Controllers
 {
-    [Route("api/[controller]")]
+    [Authorize(LocalApi.PolicyName)]
+    [Route("api/[controller]/{action}")]
     [ApiController]
     public class UserController : ControllerBase
     {
@@ -30,7 +33,7 @@ namespace CoırseSales.IdentityServer.Controllers
                 City = model.City,
             };
             var result = await _userManager.CreateAsync(user,model.Password);
-            if (result.Succeeded)
+            if (!result.Succeeded)
             {
                 return BadRequest(Response<NoContent>.Fail(result.Errors.Select(x => x.Description).ToList(), 400));
             }

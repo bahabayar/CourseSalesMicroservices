@@ -1,4 +1,4 @@
-﻿namespace CoırseSales.IdentityServer.Dtos
+﻿namespace CourseSales.IdentityServer.Dtos
 {
     public class SignupDto
     {

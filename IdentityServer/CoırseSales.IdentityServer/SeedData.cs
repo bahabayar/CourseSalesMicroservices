@@ -6,14 +6,14 @@ using System;
 using System.Linq;
 using System.Security.Claims;
 using IdentityModel;
-using CoırseSales.IdentityServer.Data;
-using CoırseSales.IdentityServer.Models;
+using CourseSales.IdentityServer.Data;
+using CourseSales.IdentityServer.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 
-namespace CoırseSales.IdentityServer
+namespace CourseSales.IdentityServer
 {
     public class SeedData
     {

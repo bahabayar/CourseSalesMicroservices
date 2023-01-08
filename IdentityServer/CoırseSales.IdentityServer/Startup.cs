@@ -3,8 +3,8 @@
 
 
 using IdentityServer4;
-using CoırseSales.IdentityServer.Data;
-using CoırseSales.IdentityServer.Models;
+using CourseSales.IdentityServer.Data;
+using CourseSales.IdentityServer.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -13,7 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace CoırseSales.IdentityServer
+namespace CourseSales.IdentityServer
 {
     public class Startup
     {
@@ -28,6 +28,7 @@ namespace CoırseSales.IdentityServer
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddLocalApiAuthentication();
             services.AddControllersWithViews();
 
             services.AddDbContext<ApplicationDbContext>(options =>
@@ -48,6 +49,7 @@ namespace CoırseSales.IdentityServer
                 options.EmitStaticAudienceClaim = true;
             })
                 .AddInMemoryIdentityResources(Config.IdentityResources)
+                .AddInMemoryApiResources(Config.ApiResources)
                 .AddInMemoryApiScopes(Config.ApiScopes)
                 .AddInMemoryClients(Config.Clients)
                 .AddAspNetIdentity<ApplicationUser>();
@@ -80,6 +82,7 @@ namespace CoırseSales.IdentityServer
 
             app.UseRouting();
             app.UseIdentityServer();
+            app.UseAuthentication();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {

@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace CoırseSales.IdentityServer.Migrations
+namespace CourseSales.IdentityServer.Migrations
 {
     public partial class init : Migration
     {
