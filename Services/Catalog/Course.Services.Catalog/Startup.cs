@@ -1,6 +1,7 @@
 using CourseSales.Services.Catalog.Services;
 using CourseSales.Services.Catalog.Services.Interfaces;
 using CourseSales.Services.Catalog.Settings;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -46,6 +47,12 @@ namespace CourseSales.Services.Catalog
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Course.Services.Catalog", Version = "v1" });
             });
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options => 
+            {
+                options.Authority = Configuration["IdentityServerUrl"];
+                options.Audience = "resource_catalog";
+                options.RequireHttpsMetadata = false;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,7 +66,7 @@ namespace CourseSales.Services.Catalog
             }
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
