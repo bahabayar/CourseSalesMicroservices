@@ -1,12 +1,12 @@
-﻿using CoırseSales.IdentityServer.Dtos;
-using CoırseSales.IdentityServer.Models;
+﻿using CourseSales.IdentityServer.Dtos;
+using CourseSales.IdentityServer.Models;
 using CourseSales.Shared.Dtos;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CoırseSales.IdentityServer.Controllers
+namespace CourseSales.IdentityServer.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

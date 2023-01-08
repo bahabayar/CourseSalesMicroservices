@@ -20,7 +20,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CourseSales.Shared", "Share
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer", "IdentityServer", "{5E820933-98E3-4663-B715-F9B93209F342}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoırseSales.IdentityServer", "IdentityServer\CoırseSales.IdentityServer\CoırseSales.IdentityServer.csproj", "{40F93F69-51AB-423A-953F-CD4ABFCDD89E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CourseSales.IdentityServer", "IdentityServer\CoırseSales.IdentityServer\CourseSales.IdentityServer.csproj", "{40F93F69-51AB-423A-953F-CD4ABFCDD89E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

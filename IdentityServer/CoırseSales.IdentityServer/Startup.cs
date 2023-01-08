@@ -3,8 +3,8 @@
 
 
 using IdentityServer4;
-using CoırseSales.IdentityServer.Data;
-using CoırseSales.IdentityServer.Models;
+using CourseSales.IdentityServer.Data;
+using CourseSales.IdentityServer.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -13,7 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace CoırseSales.IdentityServer
+namespace CourseSales.IdentityServer
 {
     public class Startup
     {
